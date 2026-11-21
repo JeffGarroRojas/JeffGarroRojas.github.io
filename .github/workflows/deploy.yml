@@ -34,6 +34,9 @@ jobs:
       - name: Compilar
         run: npm run build
 
+      - name: Fallback para rutas SPA
+        run: cp dist/index.html dist/404.html
+
       - name: Configurar Pages
         uses: actions/configure-pages@v5
 
